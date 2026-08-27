@@ -11,7 +11,7 @@ Controls:
   x or Ctrl+C   quit
 
 Usage:
-  python3 yc_car.py [--addr MAC]
+  python3 car_rc.py [--addr MAC]
 """
 import argparse
 import asyncio

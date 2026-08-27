@@ -1,29 +1,6 @@
 #!/usr/bin/env python3
 """
-yc_car.py — Realtime keyboard controller for the YC_CAR_DEMO BLE toy car.
-
-Protocol reverse-engineered from the Wonder Toys Android app (wondertoys.in
-"wonder-toys-remote.apk", uni-app bundle, App.vue sendOrder()). The car
-exposes a custom GATT service 0000fff0 with:
-  0000fff1 - notify (status, unused so far)
-  0000fff2 - write  (commands)
-
-Command frame (10 bytes hex): aa000200000000 <n> <speed> <flag>
-  n     = packed byte: bit7 lightMode(unused, this car has no lights),
-          bits6-5 playMode(default 10), bit4 sprayMode,
-          bit3 speedD(steer-right), bit2 speedC(steer-left),
-          bit1 speedB(backward), bit0 speedA(forward)
-  speed = throttle 0-100 as a raw hex byte (isSupercar variant) - confirmed
-          on-device to have NO effect; this unit's motor driver is on/off
-          only (no PWM), so we just always send full speed (0x64)
-  flag  = 0x01 (supercar), 0x02 (dumpers), 0x03 (other) - vehicle family tag
-
-  (Bit meanings confirmed empirically on-device: A=forward, B=backward,
-  C=steer-left, D=steer-right.)
-
-The real app resends the current state ~every 100ms while a control is
-held. This script leans on terminal key-repeat + a short release timeout
-to approximate "hold a key to keep moving".
+car_rc.py — Realtime keyboard controller for the YC_CAR_DEMO BLE toy car.
 
 Controls:
   w/s       forward / backward

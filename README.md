@@ -27,6 +27,7 @@ app's APK (a uni-app bundle; the BLE logic lives in plain JS in
 
 ## Product / app links
 
+- Tested on: [Rock Master Car (without spray)](https://wondertoys.in/products/rock-master-car-without-spray)
 - Vendor site: [wondertoys.in](https://wondertoys.in)
 - App download page: [wondertoys.in/app-download](https://wondertoys.in/app-download)
 - Companion app: **LCW_RCcar** (published by Shenzhen LCW Microelectronics)

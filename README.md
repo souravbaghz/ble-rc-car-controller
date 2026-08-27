@@ -5,10 +5,10 @@ directly to it over Bluetooth Low Energy — no companion app required.
 
 ## Background
 
-This car ships with unconfigured demo firmware (it advertises as
+This car ships with demo firmware (it advertises as
 `YC_CAR_DEMO` and exposes TI's stock `SimpleBLEPeripheral` GATT profile),
 so its actual companion app (Wonder Toys / `LCW_RCcar`) never recognizes
-it — the app filters for a different device name it'll never see. The
+it(at least to me) — the app filters for a different device name it'll never see. The
 drive-command protocol here was reverse-engineered directly from that
 app's APK (a uni-app bundle; the BLE logic lives in plain JS in
 `app-service.js`) and confirmed on the physical car.
@@ -33,10 +33,6 @@ app's APK (a uni-app bundle; the BLE logic lives in plain JS in
 - Companion app: **LCW_RCcar** (published by Shenzhen LCW Microelectronics)
   - Android APK (direct download, outside Play Store): [wonder-toys-remote.apk](https://wondertoys.in/uploads/app/wonder-toys-remote.apk)
   - iOS: [LCW_RCcar on the App Store](https://apps.apple.com/us/app/lcw-rccar/id6745876302)
-- Per the vendor's own app-download page, the app expects the car to appear
-  in Bluetooth settings as **`HY_2504`** — the unit this project targets
-  shipped instead advertising as `YC_CAR_DEMO` (unconfigured demo firmware),
-  which is why the app never finds it and why this project exists.
 
 ## Requirements
 

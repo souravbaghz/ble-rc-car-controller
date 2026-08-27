@@ -12,6 +12,8 @@ Controls:
 
 Usage:
   python3 car_rc.py [--addr MAC]
+
+Author: @souravbaghz (https://github.com/souravbaghz)
 """
 import argparse
 import asyncio
@@ -30,6 +32,7 @@ BANNER = r"""
 ================================================
         D E M O L I T I O N   D E R B Y
               rogue BLE remote
+                  @souravbaghz
 ================================================
 """
 

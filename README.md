@@ -8,7 +8,7 @@ directly to it over Bluetooth Low Energy — no companion app required.
 This car ships with demo firmware (it advertises as
 `YC_CAR_DEMO` and exposes TI's stock `SimpleBLEPeripheral` GATT profile),
 so its actual companion app (Wonder Toys / `LCW_RCcar`) never recognizes
-it(at least to me) — the app filters for a different device name it'll never see. The
+it(at least for me) — the app filters for a different device name it'll never see. The
 drive-command protocol here was reverse-engineered directly from that
 app's APK (a uni-app bundle; the BLE logic lives in plain JS in
 `app-service.js`) and confirmed on the physical car.

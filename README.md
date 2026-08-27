@@ -25,6 +25,18 @@ app's APK (a uni-app bundle; the BLE logic lives in plain JS in
     unit (its motor driver is on/off only, no PWM), always sent as `0x64`
   - `flag` — vehicle-family tag (`0x01` for this model)
 
+## Product / app links
+
+- Vendor site: [wondertoys.in](https://wondertoys.in)
+- App download page: [wondertoys.in/app-download](https://wondertoys.in/app-download)
+- Companion app: **LCW_RCcar** (published by Shenzhen LCW Microelectronics)
+  - Android APK (direct download, outside Play Store): [wonder-toys-remote.apk](https://wondertoys.in/uploads/app/wonder-toys-remote.apk)
+  - iOS: [LCW_RCcar on the App Store](https://apps.apple.com/us/app/lcw-rccar/id6745876302)
+- Per the vendor's own app-download page, the app expects the car to appear
+  in Bluetooth settings as **`HY_2504`** — the unit this project targets
+  shipped instead advertising as `YC_CAR_DEMO` (unconfigured demo firmware),
+  which is why the app never finds it and why this project exists.
+
 ## Requirements
 
 - Linux with BlueZ (or macOS; Bluetooth adapter with BLE support)
